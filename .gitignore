@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.astro/
+# agent working notes (style rules, personal constraints) - never publish
+specs/

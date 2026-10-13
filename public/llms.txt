@@ -1,0 +1,39 @@
+# Mateo Cerri
+
+> Tinkerer working from Rafaela, Argentina. Takes things apart to see what
+> else they could become: agent tooling, computer vision, low-level
+> experiments. Prefers showing commits over collecting labels.
+
+Advanced Computer Engineering student at UNRaf (B.S. in progress, final
+project on visual inspection). Independent developer since 2026:
+designed, deployed, and maintains a custom e-commerce platform for
+Beccaria Mayorista (Astro, React, AdonisJS, PostgreSQL).
+
+## Availability
+
+Open to selected freelance and consulting work. Remote, async-friendly.
+Contact: hi@mateocerri.com (details at https://mateocerri.com/contact).
+
+## Pages
+
+- [Home](https://mateocerri.com/): profile, current work, selected projects, record
+- [Blog](https://mateocerri.com/blog): notes on building, with recaps and takeaways
+- [Contact](https://mateocerri.com/contact): email, socials, Spanish-language note
+- [Giving my agent tools that show their work](https://mateocerri.com/blog/giving-agent-auditable-tools): two OpenCode plugins (script registry, anchor-based edits) and the 70-file rename that proved them
+- [The bug was a missing .exe](https://mateocerri.com/blog/upstream-shot-that-missed): contributing upstream to kache (Rust build cache) instead of building a private tool
+- [The binary follows the data](https://mateocerri.com/blog/binary-follows-the-data): a shim that picks the right executable per platform at the Windows/Linux boundary
+
+## Selected work
+
+- opencode-patchflow / opencode-scriptbox (+ slim-output, wsl-shim): visible tools for coding agents — https://github.com/mateocerri
+- hlsd: HLS recording daemon, every segment fetched exactly once — https://github.com/mateocerri/hlsd
+- Beccaria Mayorista: wholesale e-commerce platform, live — https://beccariamayorista.com.ar/
+- Upstream Rust contributions: kache (build cache), Graphite (2D editor)
+
+## Record
+
+- Computer Engineering, UNRaf, B.S. in progress (final project: visual inspection)
+- Independent developer, 2026 to now
+- Huawei ICT Competition, second prize, Cloud track, 2024–2025
+- AWS Academy graduate x3 (Cloud Architecting, ML for NLP, Cloud Foundations)
+- Spanish native, English B2

@@ -1,0 +1,54 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => +b.data.date - +a.data.date
+);
+---
+
+<Base title="Writing — Mateo Cerri" description="Posts on agent tooling, systems, and honest upstream attempts.">
+  <div class="wrap">
+    <header class="site-head">
+      <a class="site-name" href="/">Mateo Cerri</a>
+      <nav class="site-nav">
+        <a href="/#now">Now</a>
+        <a href="/#work">Work</a>
+        <a href="/#experiments">Experiments</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Writing</h1>
+      <p class="sec-note">occasional, technical, honest</p>
+      <ul class="index">
+        {
+          posts.map((post) => (
+            <li>
+              <div class="row-head">
+                <span class="row-date">
+                  {post.data.date.toISOString().slice(0, 10)}
+                </span>
+                <span class="row-title">
+                  <a href={`/blog/${post.id.replace(/\.mdx?$/, "")}`}>{post.data.title}</a>
+                </span>
+              </div>
+              <p class="row-desc">{post.data.description}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+
+    <footer>
+      <p>Built with Astro. No JavaScript.</p>
+      <p>
+        <a href="https://github.com/mateocerri">GitHub</a>
+        ·
+        <a href="https://www.linkedin.com/in/mateocerri">LinkedIn</a>
+      </p>
+    </footer>
+  </div>
+</Base>

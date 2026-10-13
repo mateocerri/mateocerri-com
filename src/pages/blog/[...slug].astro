@@ -1,0 +1,49 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id.replace(/\.mdx?$/, "") },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const date = post.data.date.toISOString().slice(0, 10);
+---
+
+<Base title={`${post.data.title} — Mateo Cerri`} description={post.data.description}>
+  <div class="wrap">
+    <header class="site-head">
+      <a class="site-name" href="/">Mateo Cerri</a>
+      <nav class="site-nav">
+        <a href="/#now">Now</a>
+        <a href="/#work">Work</a>
+        <a href="/#experiments">Experiments</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="prose">
+      <p class="sec-note">{date}</p>
+      <h1>{post.data.title}</h1>
+      <Content />
+      <p class="back">
+        <a href="/blog">← All writing</a>
+      </p>
+    </main>
+
+    <footer>
+      <p>Built with Astro. No JavaScript.</p>
+      <p>
+        <a href="https://github.com/mateocerri">GitHub</a>
+        ·
+        <a href="https://www.linkedin.com/in/mateocerri">LinkedIn</a>
+      </p>
+    </footer>
+  </div>
+</Base>
