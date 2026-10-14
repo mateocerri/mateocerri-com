@@ -28,6 +28,8 @@ Contact: hi@mateocerri.com (details at https://mateocerri.com/contact).
 - opencode-patchflow / opencode-scriptbox (+ slim-output, wsl-shim): visible tools for coding agents — https://github.com/mateocerri
 - hlsd: HLS recording daemon, every segment fetched exactly once — https://github.com/mateocerri/hlsd
 - Beccaria Mayorista: wholesale e-commerce platform, live — https://beccariamayorista.com.ar/
+- SerialPlotter: DSP over serial with a microcontroller, live FFT and filters back — https://github.com/mateocerri/SerialPlotter
+- Golfscript: GolfScript esolang interpreter in C#, with unit tests — https://github.com/mateocerri/Golfscript
 - Upstream Rust contributions: kache (build cache), Graphite (2D editor)
 
 ## Record
